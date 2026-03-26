@@ -3,7 +3,7 @@ package me.pepperbell.continuity.api.client;
 import java.util.function.Function;
 
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.resources.model.Material;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.world.level.block.state.BlockState;
 
 public interface CachingPredicates {
