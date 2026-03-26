@@ -7,8 +7,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import me.pepperbell.continuity.client.config.ContinuityConfig;
 import me.pepperbell.continuity.client.resource.CustomBlockLayers;
-import net.fabricmc.fabric.api.renderer.v1.render.RenderLayerHelper;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.fabricmc.fabric.api.client.renderer.v1.render.ChunkSectionLayerHelper;
+import net.minecraft.client.renderer.ItemBlockRenderTypes; // REMOVED
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -30,7 +30,7 @@ abstract class ItemBlockRenderTypesMixin {
 		if (!CustomBlockLayers.isEmpty() && ContinuityConfig.INSTANCE.customBlockLayers.get()) {
 			ChunkSectionLayer layer = CustomBlockLayers.getLayer(state);
 			if (layer != null) {
-				cir.setReturnValue(RenderLayerHelper.getMovingBlockLayer(layer));
+				cir.setReturnValue(ChunkSectionLayerHelper.getMovingBlockLayer(layer));
 			}
 		}
 	}
