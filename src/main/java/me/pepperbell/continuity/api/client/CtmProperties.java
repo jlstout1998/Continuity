@@ -5,7 +5,7 @@ import java.util.Properties;
 
 import org.jetbrains.annotations.Nullable;
 
-import net.minecraft.client.resources.model.Material;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.resources.ResourceManager;
