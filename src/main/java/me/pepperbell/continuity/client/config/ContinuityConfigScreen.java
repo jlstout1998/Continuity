@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
@@ -56,7 +56,7 @@ public class ContinuityConfigScreen extends Screen {
 	}
 
 	@Override
-	public void render(GuiGraphics context, int mouseX, int mouseY, float delta) {
+	public void render(GuiGraphicsExtractor context, int mouseX, int mouseY, float delta) {
 		super.render(context, mouseX, mouseY, delta);
 		context.drawCenteredString(font, title, width / 2, 30, 0xFFFFFF);
 	}
