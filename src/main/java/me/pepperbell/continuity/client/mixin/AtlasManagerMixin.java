@@ -18,7 +18,7 @@ import me.pepperbell.continuity.client.resource.EmissiveSuffixLoader;
 import me.pepperbell.continuity.client.resource.ModelWrappingHandler;
 import me.pepperbell.continuity.client.resource.SpriteLoaderLoadContext;
 import me.pepperbell.continuity.client.resource.SpriteLoaderLoadContextImpl;
-import net.minecraft.client.resources.model.AtlasManager;
+import net.minecraft.client.resources.model.sprite.AtlasManager;
 import net.minecraft.data.AtlasIds;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.resources.PreparableReloadListener;
