@@ -118,7 +118,7 @@ public final class SpriteCalculator {
 			}
 			emitter.popTransform();
 			Set<TextureAtlasSprite> sprites = quadTransform.result();
-			return !sprites.isEmpty() ? sprites : Set.of(model.particleIcon());
+			return !sprites.isEmpty() ? sprites : Set.of(model.particleMaterial());
 		}
 
 		public void clear() {
