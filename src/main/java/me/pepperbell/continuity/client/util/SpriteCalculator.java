@@ -16,13 +16,13 @@ import net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView;
 import net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter;
 import net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadTransform;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.BlockModelShaper;
-import net.minecraft.client.renderer.block.model.BlockStateModel;
+import net.minecraft.client.renderer.block.BlockModelSet; // net.minecraft.client.renderer.block.BlockModelShaper;
+import net.minecraft.client.renderer.block.dispatch.BlockStateModel;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.EmptyBlockAndTintGetter;
+import net.minecraft.client.renderer.block.BlockAndTintGetter; // import net.minecraft.world.level.EmptyBlockAndTintGetter;
 import net.minecraft.world.level.block.state.BlockState;
 
 public final class SpriteCalculator {
@@ -112,7 +112,7 @@ public final class SpriteCalculator {
 			emitter.pushTransform(quadTransform);
 			random.setSeed(42);
 			try {
-				model.emitQuads(emitter, EmptyBlockAndTintGetter.INSTANCE, BlockPos.ZERO, state, random, cullFace -> false);
+				model.emitQuads(emitter, BlockAndTintGetter#EMPTY.INSTANCE, BlockPos.ZERO, state, random, cullFace -> false);
 			} catch (Exception e) {
 				//
 			}
