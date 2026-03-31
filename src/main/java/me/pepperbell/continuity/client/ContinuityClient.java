@@ -64,10 +64,10 @@ public class ContinuityClient implements ClientModInitializer {
 		ModelWrappingHandler.init();
 
 		ResourceLoader resourceLoader = ResourceLoader.get(PackType.CLIENT_RESOURCES);
-		resourceLoader.registerReloader(RenderUtil.ReloadListener.ID, RenderUtil.ReloadListener.INSTANCE);
-		resourceLoader.addReloaderOrdering(ResourceReloaderKeys.Client.ATLAS, RenderUtil.ReloadListener.ID);
-		resourceLoader.registerReloader(CustomBlockLayers.ReloadListener.ID, CustomBlockLayers.ReloadListener.INSTANCE);
-		resourceLoader.registerReloader(CtmResourceReloader.ID, CtmResourceReloader.INSTANCE);
+		resourceLoader.registerReloadListener(RenderUtil.ReloadListener.ID, RenderUtil.ReloadListener.INSTANCE);
+		resourceLoader.addListenerOrdering(ResourceReloaderKeys.Client.ATLAS, RenderUtil.ReloadListener.ID);
+		resourceLoader.registerReloadListener(CustomBlockLayers.ReloadListener.ID, CustomBlockLayers.ReloadListener.INSTANCE);
+		resourceLoader.registerReloadListener(CtmResourceReloader.ID, CtmResourceReloader.INSTANCE);
 
 		FabricLoader.getInstance().getModContainer(ID).ifPresent(container -> {
 			ResourceLoader.registerBuiltinPack(asId("default"), container, Component.translatable("resourcePack.continuity.default.name"), PackActivationType.NORMAL);
