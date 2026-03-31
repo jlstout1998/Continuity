@@ -109,7 +109,7 @@ public class EmissiveBlockStateModel extends WrapperBlockStateModel {
 				emitter.copyFrom(quad);
 				emitter.emissive(true).diffuseShade(false).ambientOcclusion(TriState.FALSE);
 
-				ChunkSectionLayer renderLayer = quad.renderLayer();
+				ChunkSectionLayer renderLayer = quad.chunkLayer();
 				if (renderLayer == null) {
 					if (calculateDefaultLayer) {
 						isDefaultLayerSolid = ItemBlockRenderTypes.getChunkRenderType(state) == ChunkSectionLayer.SOLID;
@@ -117,10 +117,10 @@ public class EmissiveBlockStateModel extends WrapperBlockStateModel {
 					}
 
 					if (isDefaultLayerSolid) {
-						emitter.renderLayer(ChunkSectionLayer.CUTOUT);
+						emitter.chunkLayer(ChunkSectionLayer.CUTOUT);
 					}
 				} else if (renderLayer == ChunkSectionLayer.SOLID) {
-					emitter.renderLayer(ChunkSectionLayer.CUTOUT);
+					emitter.chunkLayer(ChunkSectionLayer.CUTOUT);
 				}
 
 				QuadUtil.interpolate(emitter, sprite, emissiveSprite);
