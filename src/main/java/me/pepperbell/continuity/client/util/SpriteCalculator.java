@@ -54,7 +54,7 @@ public final class SpriteCalculator {
 		private final Reference2ObjectOpenHashMap<BlockState, Set<TextureAtlasSprite>> spritesMap = new Reference2ObjectOpenHashMap<>();
 		private final MutableMesh mutableMesh = Renderer.get().mutableMesh();
 		private final CollectingQuadTransform quadTransform;
-		private final RandomSource random = RandomSource.createNewThreadLocalInstance();
+		private final RandomSource random = RandomSource.createThreadLocalInstance();
 		private final StampedLock lock = new StampedLock();
 
 		public SpriteCache(Direction face) {
