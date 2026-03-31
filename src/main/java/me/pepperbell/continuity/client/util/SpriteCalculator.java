@@ -112,7 +112,7 @@ public final class SpriteCalculator {
 			emitter.pushTransform(quadTransform);
 			random.setSeed(42);
 			try {
-				model.emitQuads(emitter, BlockAndTintGetter#EMPTY, BlockPos.ZERO, state, random, cullFace -> false);
+				model.emitQuads(emitter, BlockAndTintGetter.EMPTY, BlockPos.ZERO, state, random, cullFace -> false);
 			} catch (Exception e) {
 				//
 			}
