@@ -116,7 +116,7 @@ public class CtmBlockStateModel extends WrapperBlockStateModel {
 
 	protected static class CtmQuadTransform implements QuadTransform {
 		protected final ProcessingContextImpl processingContext = new ProcessingContextImpl();
-		protected final RandomSource random = RandomSource.createNewThreadLocalInstance();
+		protected final RandomSource random = RandomSource.createThreadLocalInstance();
 
 		protected BlockAndTintGetter level;
 		protected BlockPos pos;
