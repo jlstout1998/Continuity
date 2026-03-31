@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 import me.pepperbell.continuity.api.client.CachingPredicates;
 import me.pepperbell.continuity.client.properties.BaseCtmProperties;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.resources.model.Material;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.state.BlockState;
 
